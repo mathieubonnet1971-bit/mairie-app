@@ -33,7 +33,7 @@
       border-top:1px solid #ccc;
       padding:10px 0;
     }
-    .nav div {cursor:pointer;}
+    .nav div {cursor:pointer;font-size: 20px;}
     .list-item {
       background:white;
       padding:10px;
@@ -51,6 +51,9 @@
       padding:8px;
       display:block;
       z-index:1000;
+    }
+    #refreshBtn {
+    font-weight: bold;
     }
   </style>
 </head>
@@ -181,7 +184,9 @@ function loadNews() {
       });
 
       lastData = JSON.stringify(data);
-      document.getElementById('updateInfo').style.display = 'none';
+
+      // 🔴 cacher la pastille
+      document.getElementById('notifDot').style.display = 'none';
     });
 }
 
@@ -193,7 +198,8 @@ function loadNews() {
       const newData = JSON.stringify(data);
 
       if (lastData && newData !== lastData) {
-        document.getElementById('updateInfo').style.display = 'block';
+        // 🔴 afficher la pastille
+        document.getElementById('notifDot').style.display = 'block';
       }
     });
 }
