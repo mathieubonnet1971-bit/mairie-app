@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Travaux SJJ",
+    "date": "2026-04-12",
+    "content": "Début des travaux pour 2 semaines."
+  },
+  {
+    "title": "Fête du NDO",
+    "date": "2026-06-20",
+    "content": "Animations toute la journée."
+  }
+]
