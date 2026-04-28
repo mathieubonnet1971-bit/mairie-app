@@ -1,19 +1,5 @@
 [
   {
-    "title": "Martine Laclau",
-    "content": "Maire"
-  },
-  {
-    "title": "Virginie Aubé",
-    "content": "Première adjointe"
-  },
-  {
-    "title": "Alexandre Bibal",
-    "content": "Conseiller\n En charge de ..."
-  }
-]
-[
-  {
     "name": "Martine Laclau",
     "role": "Maire",
     "photo": "martine.jpg",
