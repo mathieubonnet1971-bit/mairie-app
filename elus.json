@@ -2,19 +2,19 @@
   {
     "name": "Martine Laclau",
     "role": "Maire",
-    "photo": "martine.jpg",
+    "photo": "fake.png",
     "contact": "mairiepaulinet@wanadoo.fr"
   },
   {
     "name": "Virginie Aubé",
     "role": "Première adjointe",
-    "photo": "virginie.jpg",
+    "photo": "fake.png",
     "contact": ""
   },
   {
     "name": "Alexandre Bibal",
     "role": "Conseiller",
-    "photo": "alex_b.jpg",
+    "photo": "fake.png",
     "contact": ""
   }
 ]
