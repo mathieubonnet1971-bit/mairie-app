@@ -247,13 +247,181 @@ function loadNews() {
     });
 }
 
+  // Travaux
+  let lastTravauxData = '';
+  
+  function loadTravaux() {
+  fetch('travaux.json?t=' + Date.now())
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('travaux');
+      container.innerHTML = '<h3>Travaux</h3>';
+
+      data.forEach(item => {
+
+        // couleur selon statut
+        let color = '#999';
+        if (item.status === 'en cours') color = 'orange';
+        if (item.status === 'terminé') color = 'green';
+        if (item.status === 'prévu') color = 'gray';
+
+        container.innerHTML += `
+          <div class="list-item">
+            <strong>${item.title}</strong><br>
+            <span style="color:${color}; font-weight:bold;">
+              ${item.status}
+            </span><br>
+            ${item.date}<br>
+            ${item.content}
+          </div>
+        `;
+      });
+
+      lastTravauxData = JSON.stringify(data);
+
+      // cacher pastille
+      const dot = document.getElementById('notifDotTravaux');
+      if (dot) dot.style.display = 'none';
+    })
+    .catch(err => console.error('Erreur travaux:', err));
+}
+
+function checkTravauxUpdate() {
+  fetch('travaux.json?t=' + Date.now())
+    .then(res => res.json())
+    .then(data => {
+      const newData = JSON.stringify(data);
+
+      if (lastTravauxData && newData !== lastTravauxData) {
+        const dot = document.getElementById('notifDotTravaux');
+        if (dot) dot.style.display = 'block';
+
+        // notification (optionnel)
+        sendNotification(
+          "Mairie de Paulinet",
+          "Mise à jour des travaux"
+        );
+      }
+    });
+}
+
+  // Élus
+let lastElusData = '';
+
+  function loadElus() {
+  fetch('elus.json?t=' + Date.now())
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('elus');
+      container.innerHTML = '<h3>Élus</h3>';
+
+      data.forEach(item => {
+        container.innerHTML += `
+          <div class="list-item" style="display:flex; align-items:center; gap:10px;">
+            
+            <img src="${item.photo || 'default.png'}"
+                 style="width:50px; height:50px; border-radius:50%; object-fit:cover;">
+            
+            <div>
+              <strong>${item.name}</strong><br>
+              ${item.role}<br>
+              <span style="font-size:12px; color:#666;">
+                ${item.contact || ''}
+              </span>
+            </div>
+
+          </div>
+        `;
+      });
+
+      lastElusData = JSON.stringify(data);
+
+      // cacher pastille
+      const dot = document.getElementById('notifDotElus');
+      if (dot) dot.style.display = 'none';
+    })
+    .catch(err => console.error('Erreur élus:', err));
+}
+
+  function checkElusUpdate() {
+  fetch('elus.json?t=' + Date.now())
+    .then(res => res.json())
+    .then(data => {
+      const newData = JSON.stringify(data);
+
+      if (lastElusData && newData !== lastElusData) {
+        const dot = document.getElementById('notifDotElus');
+        if (dot) dot.style.display = 'block';
+
+        sendNotification(
+          "Mairie de Paulinet",
+          "Mise à jour des élus"
+        );
+      }
+    });
+}
+
+  // Infos
+  let lastInfosData = '';
+
+  function loadInfos() {
+  fetch('infos.json?t=' + Date.now())
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('infos');
+      container.innerHTML = '<h3>Infos pratiques</h3>';
+
+      data.forEach(section => {
+        container.innerHTML += `
+          <div class="list-item">
+            <strong>${section.title}</strong><br>
+            ${section.content}
+          </div>
+        `;
+      });
+
+      lastInfosData = JSON.stringify(data);
+
+      const dot = document.getElementById('notifDotInfos');
+      if (dot) dot.style.display = 'none';
+    })
+    .catch(err => console.error('Erreur infos:', err));
+}
+
+  function checkInfosUpdate() {
+  fetch('infos.json?t=' + Date.now())
+    .then(res => res.json())
+    .then(data => {
+      const newData = JSON.stringify(data);
+
+      if (lastInfosData && newData !== lastInfosData) {
+        const dot = document.getElementById('notifDotInfos');
+        if (dot) dot.style.display = 'block';
+
+        sendNotification(
+          "Mairie de Paulinet",
+          "Mise à jour des informations pratiques"
+        );
+      }
+    });
+}
+
+  
+  
+
 // Vérification toutes les 2 minutes
 setInterval(checkForUpdate, 120000);
-  setInterval(checkAgendaUpdate, 120000);
-
+setInterval(checkAgendaUpdate, 120000);
+setInterval(checkTravauxUpdate, 120000);
+setInterval(checkElusUpdate, 120000);
+setInterval(checkInfosUpdate, 120000);
+  
 
   loadNews();
   loadAgenda();
+  loadTravaux();
+  loadElus();
+  loadInfos();
   
 </script>
 
