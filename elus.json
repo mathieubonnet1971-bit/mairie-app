@@ -12,3 +12,23 @@
     "content": "Conseiller\n En charge de ..."
   }
 ]
+[
+  {
+    "name": "Martine Laclau",
+    "role": "Maire",
+    "photo": "martine.jpg",
+    "contact": "mairiepaulinet@wanadoo.fr"
+  },
+  {
+    "name": "Virginie Aubé",
+    "role": "Première adjointe",
+    "photo": "virginie.jpg",
+    "contact": ""
+  },
+  {
+    "name": "Alexandre Bibal",
+    "role": "Conseiller",
+    "photo": "alex_b.jpg",
+    "contact": ""
+  }
+]
