@@ -113,6 +113,21 @@
   <div onclick="show('agenda')">📅</div>
   <div onclick="show('travaux')">🏗️</div>
   <div onclick="show('elus')">👥</div>
+
+  <!-- bouton refresh -->
+  <div id="refreshBtn" onclick="loadNews()" style="position:relative;">
+    🔄
+    <span id="notifDot" style="
+      display:none;
+      position:absolute;
+      top:2px;
+      right:8px;
+      width:8px;
+      height:8px;
+      background:red;
+      border-radius:50%;
+    "></span>
+  </div>
 </div>
 
 <script>
