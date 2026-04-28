@@ -25,13 +25,15 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   if (event.request.method !== 'GET') return;
 
-  // Network first for HTML (toujours à jour)
-  if (event.request.headers.get('accept').includes('text/html')) {
+  const url = event.request.url;
+
+  // 👉 Toujours réseau pour JSON
+  if (url.endsWith('.json')) {
     event.respondWith(
       fetch(event.request)
         .then(response => {
           const copy = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
+          caches.open('mairie-cache').then(cache => cache.put(event.request, copy));
           return response;
         })
         .catch(() => caches.match(event.request))
@@ -39,7 +41,15 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  // Cache first pour le reste
+  // 👉 HTML toujours à jour
+  if (event.request.headers.get('accept').includes('text/html')) {
+    event.respondWith(
+      fetch(event.request).catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
+  // 👉 Cache pour le reste
   event.respondWith(
     caches.match(event.request).then(response => response || fetch(event.request))
   );
