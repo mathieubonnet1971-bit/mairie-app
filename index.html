@@ -144,22 +144,49 @@
       .catch(err => console.log('SW error:', err));
   }
   //News
-  fetch('news.json?t=' + new Date().getTime())
-  .then(response => response.json())
-  .then(data => {
-    const container = document.getElementById('news');
-    container.innerHTML = '<h3>Actualités</h3>';
+ let lastData = '';
 
-    data.forEach(item => {
-      container.innerHTML += `
-        <div class=\"list-item\">
-          <strong>${item.title}</strong><br>
-          ${item.date}<br>
-          ${item.content}
-        </div>
-      `;
+function loadNews() {
+  fetch('news.json?t=' + Date.now())
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('news');
+      container.innerHTML = '<h3>Actualités</h3>';
+
+      data.forEach(item => {
+        container.innerHTML += `
+          <div class="list-item">
+            <strong>${item.title}</strong><br>
+            ${item.date}<br>
+            ${item.content}
+          </div>
+        `;
+      });
+
+      lastData = JSON.stringify(data);
+      document.getElementById('updateInfo').style.display = 'none';
     });
-  });
+}
+
+
+  function checkForUpdate() {
+  fetch('news.json?t=' + Date.now())
+    .then(res => res.json())
+    .then(data => {
+      const newData = JSON.stringify(data);
+
+      if (lastData && newData !== lastData) {
+        document.getElementById('updateInfo').style.display = 'block';
+      }
+    });
+}
+
+// Vérification toutes les 2 minutes
+setInterval(checkForUpdate, 120000);
+
+
+  loadNews();
+  
 </script>
 
 </body>
