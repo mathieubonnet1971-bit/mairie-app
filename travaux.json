@@ -1,12 +1,14 @@
 [
   {
     "title": "Route du lac",
+    "status": "🟡 En cours",
     "date": "2026-04-44",
-    "content": "🟡 En cours"
+    "content": "Prévu pour la fin du mois"
   },
   {
     "title": "Place centrale",
+    "status": "🟢 Terminé",
     "date": "2026-06-33",
-    "content": "🟢 Terminé"
+    "content": ""
   }
 ]
