@@ -213,11 +213,55 @@ function loadNews() {
     });
 }
 
+  // Agenda
+  let lastAgendaData = '';
+  
+  function loadAgenda() {
+  fetch('agenda.json?t=' + Date.now())
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('agenda');
+      container.innerHTML = '<h3>Agenda</h3>';
+
+      data.forEach(item => {
+        container.innerHTML += `
+          <div class="list-item">
+            <strong>${item.title}</strong><br>
+            ${item.date}<br>
+            ${item.content}
+          </div>
+        `;
+      });
+
+      lastAgendaData = JSON.stringify(data);
+
+      // cacher la pastille agenda si tu en mets une
+      const dot = document.getElementById('notifDotAgenda');
+      if (dot) dot.style.display = 'none';
+    })
+    .catch(err => console.error('Erreur agenda:', err));
+}
+
+  function checkAgendaUpdate() {
+  fetch('agenda.json?t=' + Date.now())
+    .then(res => res.json())
+    .then(data => {
+      const newData = JSON.stringify(data);
+
+      if (lastAgendaData && newData !== lastAgendaData) {
+        const dot = document.getElementById('notifDotAgenda');
+        if (dot) dot.style.display = 'block';
+      }
+    });
+}
+
 // Vérification toutes les 2 minutes
 setInterval(checkForUpdate, 120000);
+  setInterval(checkAgendaUpdate, 120000);
 
 
   loadNews();
+  loadAgenda();
   
 </script>
 
