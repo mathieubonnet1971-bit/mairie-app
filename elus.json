@@ -3,25 +3,25 @@
     "name": "Martine Laclau",
     "role": "Maire",
     "photo": "MLA.png",
-    "contact": "mairiepaulinet@wanadoo.fr 01 02 03 04 05"
+    "contact": "mairiepaulinet@wanadoo.fr / 01 02 03 04 05"
   },
   {
     "name": "Virginie Aubé",
     "role": "Première adjointe",
     "photo": "VAU.png",
-    "contact": ""
+    "contact": "01 23 45 67 89"
   },
   {
     "name": "Jean -Marc Resseguier",
     "role": "Deuxième adjoint",
     "photo": "JMR.png",
-    "contact": ""
+    "contact": "00 11 22 33 44"
   },
   {
     "name": "Alexandra Carrel",
     "role": "Troisième adjointe",
     "photo": "ACA.png",
-    "contact": ""
+    "contact": "12 34 56 78 90"
   },
   {
     "name": "Alexandre Bibal",
@@ -37,7 +37,7 @@
   },
   {
     "name": "Célia Prades",
-    "role": "Conseillère",
+    "role": "Conseillère, déléguée à la communication",
     "photo": "CPO.png",
     "contact": ""
   },
@@ -57,12 +57,12 @@
     "name": "Mathieu Bonnet",
     "role": "Conseiller",
     "photo": "MBO.png",
-    "contact": ""
+    "contact": "00 00 00 00 00"
   },
   {
     "name": "Manuel Panis",
     "role": "Conseiller",
     "photo": "MPA.png",
-    "contact": ""
+    "contact": "05 05 05 05 05"
   }
 ]
