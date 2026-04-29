@@ -3,7 +3,7 @@
     "name": "Martine Laclau",
     "role": "Maire",
     "photo": "MLA.png",
-    "contact": "mairiepaulinet@wanadoo.fr"
+    "contact": "mairiepaulinet@wanadoo.fr 01 02 03 04 05"
   },
   {
     "name": "Virginie Aubé",
@@ -12,9 +12,15 @@
     "contact": ""
   },
   {
-    "name": "Alexandre Bibal",
-    "role": "Conseiller",
-    "photo": "ABI.png",
+    "name": "Jean -Marc Resseguier",
+    "role": "Deuxième adjoint",
+    "photo": "JMR.png",
+    "contact": ""
+  },
+  {
+    "name": "Alexandra Carrel",
+    "role": "Troisième adjointe",
+    "photo": "ACA.png",
     "contact": ""
   },
   {
@@ -24,45 +30,39 @@
     "contact": ""
   },
   {
-    "name": "Alexandre Bibal",
-    "role": "Conseiller",
-    "photo": "ABI.png",
+    "name": "Alexandra Combes",
+    "role": "Conseillère",
+    "photo": "ACO.png",
     "contact": ""
   },
   {
-    "name": "Alexandre Bibal",
-    "role": "Conseiller",
-    "photo": "ABI.png",
+    "name": "Célia Prades",
+    "role": "Conseillère",
+    "photo": "CPO.png",
     "contact": ""
   },
   {
-    "name": "Alexandre Bibal",
+    "name": "Julien Puech",
     "role": "Conseiller",
-    "photo": "ABI.png",
+    "photo": "JPU.png",
     "contact": ""
   },
   {
-    "name": "Alexandre Bibal",
+    "name": "Jérôme Resseguier",
     "role": "Conseiller",
-    "photo": "ABI.png",
+    "photo": "JRE.png",
     "contact": ""
   },
   {
-    "name": "Alexandre Bibal",
+    "name": "Mathieu Bonnet",
     "role": "Conseiller",
-    "photo": "ABI.png",
+    "photo": "MBO.png",
     "contact": ""
   },
   {
-    "name": "Alexandre Bibal",
+    "name": "Manuel Panis",
     "role": "Conseiller",
-    "photo": "ABI.png",
-    "contact": ""
-  },
-  {
-    "name": "Alexandre Bibal",
-    "role": "Conseiller",
-    "photo": "ABI.png",
+    "photo": "MPA.png",
     "contact": ""
   }
 ]
