@@ -4,6 +4,11 @@ const STATIC_ASSETS = [
   '/index.html'
 ];
 
+self.addEventListener('install', () => self.skipWaiting());
+self.addEventListener('activate', event => {
+  event.waitUntil(self.clients.claim());
+});
+
 self.addEventListener('install', event => {
   self.skipWaiting();
   event.waitUntil(
