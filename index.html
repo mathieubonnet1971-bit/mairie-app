@@ -10,7 +10,10 @@
   <style>
     body {font-family: Arial, sans-serif; margin:0; background:#f4f6f8;}
     header {background:#2c6e49; color:white; padding:15px; text-align:center;top:25px;}
-    .container {padding:15px;}
+    .container {
+  padding: 15px;
+  padding-bottom: 70px; /* évite chevauchement avec nav */
+}
     .grid {display:grid; grid-template-columns:1fr 1fr; gap:10px;}
     .card {
       background:white;
@@ -23,23 +26,27 @@
     }
     .hidden {display:none;}
     .nav {
-      position:fixed;
-      bottom:0;
-      left:0;
-      right:0;
-      background:white;
-      display:flex;
-      justify-content:space-around;
-      border-top:1px solid #ccc;
-      padding:10px 0;
-    }
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ddd;
+  padding: 10px 0;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+}
+
     .nav div {cursor:pointer;font-size: 20px;}
     .list-item {
-      background:white;
-      padding:10px;
-      margin-bottom:10px;
-      border-radius:8px;
-    }
+  background: white;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  transition: transform 0.1s ease;
+}
     .update-banner {
       position:fixed;
       top:0;
@@ -61,6 +68,15 @@
     
   img {
   border: 2px solid #2c6e49;
+}
+
+.list-item:active {
+  transform: scale(0.98);
+}
+
+    h3 {
+  margin-bottom: 15px;
+  color: #2c6e49;
 }
 
 @keyframes pulse {
@@ -269,12 +285,16 @@ function loadNews() {
         if (item.status === 'en cours') color = 'orange';
         if (item.status === 'terminé') color = 'green';
         if (item.status === 'prévu') color = 'gray';
+        let icon = '⚫';
+        if (item.status === 'en cours') icon = '🟡';
+        if (item.status === 'terminé') icon = '🟢';
+        if (item.status === 'prévu') icon = '⚫';
 
         container.innerHTML += `
           <div class="list-item">
             <strong>${item.title}</strong><br>
-            <span style="color:${color}; font-weight:bold;">
-              ${item.status}
+            <span style="font-weight:bold;">
+              ${icon} ${item.status}
             </span><br>
             ${item.date}<br>
             ${item.content}
@@ -322,21 +342,29 @@ let lastElusData = '';
 
       data.forEach(item => {
         container.innerHTML += `
-          <div class="list-item" style="display:flex; align-items:center; gap:10px;">
-            
-            <img src="images/${item.photo || 'default.png'}"
-                 style="width:50px; height:50px; border-radius:50%; object-fit:cover;">
-            
-            <div>
-              <strong>${item.name}</strong><br>
-              ${item.role}<br>
-              <span style="font-size:12px; color:#666;">
-                ${item.contact || ''}
-              </span>
-            </div>
+  <div class="list-item" style="display:flex; align-items:center; gap:12px;">
+    
+    <img src="images/${item.photo || 'default.png'}"
+         style="
+           width:55px;
+           height:55px;
+           border-radius:50%;
+           object-fit:cover;
+           border:2px solid #2c6e49;
+         ">
+    
+    <div>
+      <strong style="font-size:16px;">${item.name}</strong><br>
+      <span style="color:#2c6e49; font-weight:bold;">
+        ${item.role}
+      </span><br>
+      <span style="font-size:12px; color:#666;">
+        ${item.contact || ''}
+      </span>
+    </div>
 
-          </div>
-        `;
+  </div>
+`;
       });
 
       lastElusData = JSON.stringify(data);
