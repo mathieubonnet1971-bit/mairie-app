@@ -169,7 +169,7 @@
  let lastData = '';
 
 function loadNews() {
-  fetch('news.json?t=' + Date.now())
+  fetch('data/news.json?t=' + Date.now())
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById('news');
@@ -194,7 +194,7 @@ function loadNews() {
 
 
   function checkForUpdate() {
-  fetch('news.json?t=' + Date.now())
+  fetch('data/news.json?t=' + Date.now())
     .then(res => res.json())
     .then(data => {
       const newData = JSON.stringify(data);
