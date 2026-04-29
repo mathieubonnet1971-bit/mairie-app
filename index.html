@@ -258,6 +258,8 @@ function loadNews() {
       });
 
       lastAgendaData = JSON.stringify(data);
+       // 🔴 cacher la pastille
+      document.getElementById('notifDot').style.display = 'none';
 
       // cacher la pastille agenda si tu en mets une
       const dot = document.getElementById('notifDotAgenda');
@@ -275,6 +277,8 @@ function loadNews() {
       if (lastAgendaData && newData !== lastAgendaData) {
         const dot = document.getElementById('notifDotAgenda');
         if (dot) dot.style.display = 'block';
+         // 🔴 afficher la pastille
+        document.getElementById('notifDot').style.display = 'block';
       }
     });
 }
@@ -315,6 +319,9 @@ function loadNews() {
 
       lastTravauxData = JSON.stringify(data);
 
+       // 🔴 cacher la pastille
+      document.getElementById('notifDot').style.display = 'none';
+
       // cacher pastille
       const dot = document.getElementById('notifDotTravaux');
       if (dot) dot.style.display = 'none';
@@ -331,6 +338,8 @@ function checkTravauxUpdate() {
       if (lastTravauxData && newData !== lastTravauxData) {
         const dot = document.getElementById('notifDotTravaux');
         if (dot) dot.style.display = 'block';
+         // 🔴 afficher la pastille
+        document.getElementById('notifDot').style.display = 'block';
 
         // notification (optionnel)
         sendNotification(
@@ -379,6 +388,8 @@ let lastElusData = '';
       });
 
       lastElusData = JSON.stringify(data);
+       // 🔴 cacher la pastille
+      document.getElementById('notifDot').style.display = 'none';
 
       // cacher pastille
       const dot = document.getElementById('notifDotElus');
@@ -396,6 +407,8 @@ let lastElusData = '';
       if (lastElusData && newData !== lastElusData) {
         const dot = document.getElementById('notifDotElus');
         if (dot) dot.style.display = 'block';
+         // 🔴 afficher la pastille
+        document.getElementById('notifDot').style.display = 'block';
 
         sendNotification(
           "Mairie de Paulinet",
@@ -425,6 +438,8 @@ let lastElusData = '';
       });
 
       lastInfosData = JSON.stringify(data);
+       // 🔴 cacher la pastille
+      document.getElementById('notifDot').style.display = 'none';
 
       const dot = document.getElementById('notifDotInfos');
       if (dot) dot.style.display = 'none';
@@ -441,6 +456,8 @@ let lastElusData = '';
       if (lastInfosData && newData !== lastInfosData) {
         const dot = document.getElementById('notifDotInfos');
         if (dot) dot.style.display = 'block';
+         // 🔴 afficher la pastille
+        document.getElementById('notifDot').style.display = 'block';
 
         sendNotification(
           "Mairie de Paulinet",
