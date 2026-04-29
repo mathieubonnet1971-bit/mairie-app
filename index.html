@@ -210,7 +210,7 @@ function loadNews() {
   let lastAgendaData = '';
   
   function loadAgenda() {
-  fetch('agenda.json?t=' + Date.now())
+  fetch('data/agenda.json?t=' + Date.now())
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById('agenda');
@@ -236,7 +236,7 @@ function loadNews() {
 }
 
   function checkAgendaUpdate() {
-  fetch('agenda.json?t=' + Date.now())
+  fetch('data/agenda.json?t=' + Date.now())
     .then(res => res.json())
     .then(data => {
       const newData = JSON.stringify(data);
@@ -252,7 +252,7 @@ function loadNews() {
   let lastTravauxData = '';
   
   function loadTravaux() {
-  fetch('travaux.json?t=' + Date.now())
+  fetch('data/travaux.json?t=' + Date.now())
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById('travaux');
@@ -288,7 +288,7 @@ function loadNews() {
 }
 
 function checkTravauxUpdate() {
-  fetch('travaux.json?t=' + Date.now())
+  fetch('data/travaux.json?t=' + Date.now())
     .then(res => res.json())
     .then(data => {
       const newData = JSON.stringify(data);
@@ -310,7 +310,7 @@ function checkTravauxUpdate() {
 let lastElusData = '';
 
   function loadElus() {
-  fetch('elus.json?t=' + Date.now())
+  fetch('data/elus.json?t=' + Date.now())
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById('elus');
@@ -345,7 +345,7 @@ let lastElusData = '';
 }
 
   function checkElusUpdate() {
-  fetch('elus.json?t=' + Date.now())
+  fetch('data/elus.json?t=' + Date.now())
     .then(res => res.json())
     .then(data => {
       const newData = JSON.stringify(data);
@@ -366,7 +366,7 @@ let lastElusData = '';
   let lastInfosData = '';
 
   function loadInfos() {
-  fetch('infos.json?t=' + Date.now())
+  fetch('data/infos.json?t=' + Date.now())
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById('infos');
@@ -390,7 +390,7 @@ let lastElusData = '';
 }
 
   function checkInfosUpdate() {
-  fetch('infos.json?t=' + Date.now())
+  fetch('data/infos.json?t=' + Date.now())
     .then(res => res.json())
     .then(data => {
       const newData = JSON.stringify(data);
