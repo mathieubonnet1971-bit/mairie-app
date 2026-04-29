@@ -282,13 +282,13 @@ function loadNews() {
 
         // couleur selon statut
         let color = '#999';
-        if (item.status === 'en cours') color = 'orange';
-        if (item.status === 'terminé') color = 'green';
-        if (item.status === 'prévu') color = 'gray';
+        if (item.status === 'En cours') color = 'orange';
+        if (item.status === 'Terminé') color = 'green';
+        if (item.status === 'Prévu') color = 'gray';
         let icon = '⚫';
-        if (item.status === 'en cours') icon = '🟡';
-        if (item.status === 'terminé') icon = '🟢';
-        if (item.status === 'prévu') icon = '⚫';
+        if (item.status === 'En cours') icon = '🟡';
+        if (item.status === 'Terminé') icon = '🟢';
+        if (item.status === 'Prévu') icon = '⚫';
 
         container.innerHTML += `
           <div class="list-item">
