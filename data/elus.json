@@ -6,5 +6,85 @@
     "photo": "MLA.png",
     "contact_mel": "mairiepaulinet@wanadoo.fr",
     "contact_tel": "01 02 03 04 05"
+  },
+  {
+    "name": "Virginie Aubé",
+    "role_main": "Première adjointe",
+    "role_other": "Déléguée générale",
+    "photo": "VAU.png",
+    "contact_mel": "toto@titi.tutu",
+    "contact_tel": "01 23 45 67 89"
+  },
+  {
+    "name": "Jean -Marc Resseguier",
+    "role_main": "Deuxième adjoint",
+    "role_other": "",
+    "photo": "JMR.png",
+    "contact_mel": "toto@titi.tutu",
+    "contact_tel": "00 11 22 33 44"
+  },
+  {
+    "name": "Alexandra Carrel",
+    "role_main": "Troisième adjointe",
+    "role_other": "",
+    "photo": "ACA.png",
+    "contact_mel": "toto@titi.tutu",
+    "contact_tel": "12 34 56 78 90"
+  },
+  {
+    "name": "Alexandre Bibal",
+    "role_main": "Conseiller",
+    "role_other": "",
+    "photo": "ABI.png",
+    "contact_mel": "",
+    "contact_tel": ""
+  },
+  {
+    "name": "Alexandra Combes",
+    "role_main": "Conseillère",
+    "role_other": "",
+    "photo": "ACO.png",
+    "contact_mel": "",
+    "contact_tel": ""
+  },
+  {
+    "name": "Célia Prades",
+    "role_main": "Conseillère",
+    "role_other": "Déléguée à la communication",
+    "photo": "CPR.png",
+    "contact_mel": "toto@titi.tutu",
+    "contact_tel": "01 47 25 83 69"
+  },
+  {
+    "name": "Julien Puech",
+    "role_main": "Conseiller",
+    "role_other": "",
+    "photo": "JPU.png",
+    "contact_mel": "toto@titi.tutu",
+    "contact_tel": "88 99 77 55 22"
+  },
+  {
+    "name": "Jérôme Resseguier",
+    "role_main": "Conseiller",
+    "role_other": "",
+    "photo": "JRE.png",
+    "contact_mel": "toto@titi.tutu",
+    "contact_tel": "36 98 74 12 35"
+  },
+  {
+    "name": "Mathieu Bonnet",
+    "role_main": "Conseiller",
+    "role_other": "",
+    "photo": "MBO.png",
+    "contact_mel": "toto@titi.tutu",
+    "contact_tel": "00 00 00 00 00"
+  },
+  {
+    "name": "Manuel Panis",
+    "role_main": "Conseiller",
+    "role_other": "Délégué à la voirie, délégué au groupement forestier de Boussac",
+    "photo": "MPA.png",
+    "contact_mel": "toto@titi.tutu",
+    "contact_tel": "05 05 05 05 05"
   }
 ]
