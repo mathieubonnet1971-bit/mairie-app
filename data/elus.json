@@ -9,7 +9,7 @@
   },
   {
     "name": "Virginie Aubé",
-    "role_main": "Première adjointe",
+    "role_main": "<img src='images/adjoint.png' style='width:16px;'/> Première adjointe",
     "role_other": "Déléguée générale",
     "photo": "VAU.png",
     "contact_mel": "toto@titi.tutu",
@@ -17,7 +17,7 @@
   },
   {
     "name": "Jean -Marc Resseguier",
-    "role_main": "Deuxième adjoint",
+    "role_main": "<img src='images/adjoint.png' style='width:16px;'/> Deuxième adjoint",
     "role_other": "",
     "photo": "JMR.png",
     "contact_mel": "toto@titi.tutu",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Alexandra Carrel",
-    "role_main": "Troisième adjointe",
+    "role_main": "<img src='images/adjoint.png' style='width:16px;'/> Troisième adjointe",
     "role_other": "",
     "photo": "ACA.png",
     "contact_mel": "toto@titi.tutu",
@@ -33,7 +33,7 @@
   },
   {
     "name": "Alexandre Bibal",
-    "role_main": "Conseiller",
+    "role_main": "<img src='images/conseiller.png' style='width:16px;'/> Conseiller",
     "role_other": "",
     "photo": "ABI.png",
     "contact_mel": "",
@@ -41,7 +41,7 @@
   },
   {
     "name": "Alexandra Combes",
-    "role_main": "Conseillère",
+    "role_main": "<img src='images/conseiller.png' style='width:16px;'/> Conseillère",
     "role_other": "",
     "photo": "ACO.png",
     "contact_mel": "",
@@ -49,7 +49,7 @@
   },
   {
     "name": "Célia Prades",
-    "role_main": "Conseillère",
+    "role_main": "<img src='images/conseiller.png' style='width:16px;'/> Conseillère",
     "role_other": "Déléguée à la communication",
     "photo": "CPR.png",
     "contact_mel": "toto@titi.tutu",
@@ -57,7 +57,7 @@
   },
   {
     "name": "Julien Puech",
-    "role_main": "Conseiller",
+    "role_main": "<img src='images/conseiller.png' style='width:16px;'/> Conseiller",
     "role_other": "",
     "photo": "JPU.png",
     "contact_mel": "toto@titi.tutu",
@@ -65,7 +65,7 @@
   },
   {
     "name": "Jérôme Resseguier",
-    "role_main": "Conseiller",
+    "role_main": "<img src='images/conseiller.png' style='width:16px;'/> Conseiller",
     "role_other": "",
     "photo": "JRE.png",
     "contact_mel": "toto@titi.tutu",
@@ -73,7 +73,7 @@
   },
   {
     "name": "Mathieu Bonnet",
-    "role_main": "Conseiller",
+    "role_main": "<img src='images/conseiller.png' style='width:16px;'/> Conseiller",
     "role_other": "",
     "photo": "MBO.png",
     "contact_mel": "toto@titi.tutu",
@@ -81,7 +81,7 @@
   },
   {
     "name": "Manuel Panis",
-    "role_main": "Conseiller",
+    "role_main": "<img src='images/conseiller.png' style='width:16px;'/> Conseiller",
     "role_other": "Délégué à la voirie, délégué au groupement forestier de Boussac",
     "photo": "MPA.png",
     "contact_mel": "toto@titi.tutu",
