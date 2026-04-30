@@ -1,7 +1,7 @@
 [
   {
     "name": "Martine Laclau",
-    "role": "Maire",
+    "role_main": "Maire",
     "photo": "MLA.png",
     "contact_mel": "mairiepaulinet@wanadoo.fr",
     "contact_tel": "01 02 03 04 05"
