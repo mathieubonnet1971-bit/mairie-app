@@ -3,7 +3,8 @@
     "name": "Martine Laclau",
     "role": "Maire",
     "photo": "MLA.png",
-    "contact": "<a href='mailto:mairiepaulinet@wanadoo.fr'>mairiepaulinet@wanadoo.fr</a> <br/> <a href='tel:0102030405'>01 02 03 04 05</a>"
+    "contact_mel": "<a href='mailto:mairiepaulinet@wanadoo.fr'>mairiepaulinet@wanadoo.fr</a>"
+    "contact_tel": "<a href='tel:0102030405'>01 02 03 04 05</a>"
   },
   {
     "name": "Virginie Aubé",
