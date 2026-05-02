@@ -12,9 +12,9 @@
     body {font-family: Arial, sans-serif; margin:0; background:#f4f6f8;}
     header {background:#2c6e49; color:white; padding:15px; text-align:center;top:25px;}
     .container {
-  padding: 15px;
-  padding-bottom: 70px; /* évite chevauchement avec nav */
-}
+      padding: 15px;
+      padding-bottom: 70px; /* évite chevauchement avec nav */
+    }
     .grid {display:grid; grid-template-columns:1fr 1fr; gap:10px;}
     .card {
       background:white;
@@ -27,27 +27,27 @@
     }
     .hidden {display:none;}
     .nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: white;
-  display: flex;
-  justify-content: space-around;
-  border-top: 1px solid #ddd;
-  padding: 10px 0;
-  box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
-}
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      display: flex;
+      justify-content: space-around;
+      border-top: 1px solid #ddd;
+      padding: 10px 0;
+      box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+    }
 
     .nav div {cursor:pointer;font-size: 20px;}
     .list-item {
-  background: white;
-  padding: 12px;
-  margin-bottom: 12px;
-  border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-  transition: transform 0.1s ease;
-}
+      background: white;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+      transition: transform 0.1s ease;
+    }
     .update-banner {
       position:fixed;
       top:0;
@@ -61,30 +61,27 @@
       z-index:1000;
     }
     #refreshBtn {
-    font-weight: bold;
+      font-weight: bold;
     }
     #notifDot {
-  animation: pulse 1s infinite;
-}
-    
+      animation: pulse 1s infinite;
+    }
 .list-item:active {
   transform: scale(0.98);
 }
-
     h3 {
   margin-bottom: 15px;
   color: #2c6e49;
 }
-
     a {
   color: orange;
   text-decoration: none;
   font-weight: bold;
 }
-
     #menuDropdown div:hover {
-  background: #f0f0f0;
-}
+      background: #f0f0f0;
+      border-radius: 12px;
+    }
 
 @keyframes pulse {
   0% { transform: scale(1); }
@@ -108,7 +105,7 @@
     
 <header>
   <h2><div style="padding-top:-15px;"><img src="images/paulinet-32.png" /></div> Mairie de Paulinet</h2>
-  <div onclick="toggleMenu()" style="font-size:24px;cursor:pointer;position:absolute;top:60px;right:10px;">
+  <div onclick="toggleMenu()" style="font-size:24px;cursor:pointer;position:absolute;top:20px;right:20px;">
     ⋮
   </div>
 </header>
