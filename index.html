@@ -82,6 +82,10 @@
   font-weight: bold;
 }
 
+    #menuDropdown div:hover {
+  background: #f0f0f0;
+}
+
 @keyframes pulse {
   0% { transform: scale(1); }
   50% { transform: scale(1.5); }
@@ -104,7 +108,50 @@
     
 <header>
   <h2><div style="padding-top:-15px;"><img src="images/paulinet-32.png" /></div> Mairie de Paulinet</h2>
+  <div onclick="toggleMenu()" style="font-size:24px; cursor:pointer;">
+    ⋮
+  </div>
 </header>
+
+  <div id="menuDropdown" style="
+  display:none;
+  position:absolute;
+  top:60px;
+  right:10px;
+  background:white;
+  border:1px solid #ccc;
+  border-radius:8px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  z-index:1000;
+">
+  <div onclick="show('about'); toggleMenu()" style="padding:10px; cursor:pointer;">
+    ℹ️ À propos
+  </div>
+</div>
+
+  <div id="about" class="container hidden">
+  <h3>À propos</h3>
+
+  <div class="list-item">
+    <strong>Application</strong><br>
+    Mairie de Paulinet
+  </div>
+
+  <div class="list-item">
+    <strong>Version</strong><br>
+    1.0
+  </div>
+
+  <div class="list-item">
+    <strong>Développement</strong><br>
+    Mathieu Bonnet
+  </div>
+
+  <div class="list-item">
+    <strong>Contact</strong><br>
+    mairiepaulinet@wanadoo.fr
+  </div>
+</div>
 
 <div id="home" class="container">
   <div class="grid">
@@ -161,6 +208,11 @@
 </div>
 
 <script>
+  function toggleMenu() {
+  const menu = document.getElementById('menuDropdown');
+  menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+}
+  
   function show(id) {
     document.querySelectorAll('.container').forEach(el => el.classList.add('hidden'));
     document.getElementById(id).classList.remove('hidden');
