@@ -123,7 +123,7 @@
   box-shadow:0 2px 8px rgba(0,0,0,0.1);
   z-index:1000;
 ">
-  <div onclick="show('about'); toggleMenu()" style="padding:10px; cursor:pointer;">
+  <div id="aboutdiv" onclick="show('about'); toggleMenu()" style="padding:10px; cursor:pointer;">
     ℹ️ À propos
   </div>
 </div>
@@ -154,7 +154,7 @@
 
 <div id="home" class="container">
   <div class="grid">
-    <div class="card" onclick="show('news');hide('about')">📰 Actualités</div>
+    <div class="card" onclick="show('news');hide('aboutdiv')">📰 Actualités</div>
     <div class="card" onclick="show('agenda')">📅 Agenda</div>
     <div class="card" onclick="show('travaux')">🏗️ Travaux</div>
     <div class="card" onclick="show('elus')">👥 Élu.e.s</div>
