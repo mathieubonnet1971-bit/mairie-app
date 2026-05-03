@@ -211,9 +211,8 @@
 }
 
   function hide(id) {
-  var elem = document.getElementById(id);
-  elem.style.display = 'none'; //or
-  // elem.style.visibility = 'hidden';
+  const elem = document.getElementById(id);
+  elem.style.display = (menu.style.display === 'none');
   }
   
   function show(id) {
