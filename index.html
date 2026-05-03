@@ -154,7 +154,7 @@
 
 <div id="home" class="container">
   <div class="grid">
-    <div class="card" onclick="show('news');hide('aboutdiv')">📰 Actualités</div>
+    <div class="card" onclick="show('news')">📰 Actualités</div>
     <div class="card" onclick="show('agenda')">📅 Agenda</div>
     <div class="card" onclick="show('travaux')">🏗️ Travaux</div>
     <div class="card" onclick="show('elus')">👥 Élu.e.s</div>
@@ -205,7 +205,7 @@
     "></span>
   </div>
 </div>
-
+<!-- ----------------------------------------------------------------------------------------------------------- -->
 <script>
   function toggleMenu() {
   const menu = document.getElementById('menuDropdown');
@@ -216,11 +216,26 @@
   const elem = document.getElementById(id);
   elem.style.display = 'none';
   }
+
+  function closeMenu() {
+  document.getElementById('menuDropdown').style.display = 'none';
+}
   
   function show(id) {
-    document.querySelectorAll('.container').forEach(el => el.classList.add('hidden'));
-    document.getElementById(id).classList.remove('hidden');
+  document.querySelectorAll('.container').forEach(el => el.classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+
+  closeMenu(); // 👈 important
+}
+
+  document.addEventListener('click', function(event) {
+  const menu = document.getElementById('menuDropdown');
+  const button = document.querySelector('[onclick="toggleMenu()"]');
+
+  if (!menu.contains(event.target) && !button.contains(event.target)) {
+    menu.style.display = 'none';
   }
+});
 
   window.addEventListener('load', () => {
   if ('serviceWorker' in navigator) {
